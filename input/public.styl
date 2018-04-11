@@ -1,0 +1,514 @@
+@import "reset.css";
+/*引入css文件的一种方式*/
+/*
+
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#99ffffff,endColorstr=#99ffffff)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+background:rgba(255,255,255,.8);
+
+
+ filter:alpha(opacity=40); 针对 IE8 以及更早的版本 */
+ body{
+ 	font-size: 16Px;
+ }
+ body
+ 	font-family 'PingFangSC'
+ input::placeholder
+ 	font-family 'Microsoft YaHei'
+.full-screen
+	width 100vw
+	min-height 100vh
+	overflow-y scroll
+	background url('../img/bg.jpg') center center/cover no-repeat
+	&::-webkit-scrollbar
+		display none
+.header
+	padding 0 26px
+	height 64px
+	font-size 20px
+	color #fff
+	line-height 64px
+	background #2b6967
+	box-shadow 0 4Px 4Px 0 rgba(0, 0, 0, 0.24), 0 0 4Px 0 rgba(0, 0, 0, 0.12)
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	align-items center
+	justify-content flex-start
+	a.back
+		width 40px
+		height 100%
+		background url('../img/微信图片_20180410161729.png') left center/20px auto no-repeat
+	h1
+		padding-left 33px
+		background url('../img/LOGO-top.png') left center /auto 50% no-repeat
+.manager-1
+	.brand
+		margin 84px auto 63px
+		width 239px
+		display block
+		img
+			width 100%
+	h2
+		padding 0 0 87px
+		font-size 28px
+		color #4a4a4a
+		line-height 1
+		text-align center
+.manager-2
+.manager-3
+.manager-4
+	h2
+		padding 62px 0 39px
+		font-size 28px
+		color #4a4a4a
+		text-align center	
+.form
+	&.pb21
+		.row
+			padding-bottom 21px
+	.row
+		padding-bottom 16px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		justify-content center
+		flex-direction column
+		&.pt36
+			padding-top 36px
+		.input-wrap
+			position relative
+			max-width 606px
+			width 75%
+		.input-title
+			max-width 606px
+			width 75%
+			padding-bottom 5px
+			font-size 17px
+			color #4a4a4a
+			line-height 24px
+			text-align left
+			.en
+				padding-left 8px
+		.input
+			width 100%
+			box-sizing border-box
+			padding 12px 18px 14px
+			border-radius 12px
+			font-size 20px
+			color #808080
+			line-height 28px
+			background #fff
+			border none
+			outline none
+		.submit
+			color #fff
+			background #2b6967
+			font-weight 500
+			cursor pointer
+		.label
+			font-size 17px
+			color #4a4a4a
+			line-height 25px
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			justify-content center
+		.checkbox
+			margin-right 15px
+			width 25px
+			height 25px
+			appearance none
+			background #fff
+			border-radius 5px
+			outline none
+			&:checked
+				background url('../img/微信图片_20180410165241.png') center center/100% 100% no-repeat
+		.top-right-icon
+			position absolute
+			top 0
+			right 0
+			width 54px
+			height 54px
+			background url('../img/下拉.png') center center/100% 100% no-repeat
+			&.drop-down
+				background-image url('../img/下拉.png')
+			&.camera
+				background-image url('../img/相機.png')
+	.upload-input
+		.input
+			border-radius 12px 12px 0 0
+	.upload
+		border-radius 0 0 12px 12px
+		max-width 606px
+		width 75%
+		padding 18px
+		box-sizing border-box
+		border-top 1px solid #d8d8d8
+		background #fff
+		img
+			display block
+			max-width 100%
+	.cloumn-two
+		max-width 606px
+		width 75%
+		margin 0 auto
+		padding 50px
+		font-size 20px
+		color #808080
+		line-height 40px
+		box-sizing border-box
+		background #fff
+		margin-bottom 16px
+		border-radius 12px
+		input
+			padding 5px 6px 5px 8px
+			line-height 26px
+			border 1px solid #d8d8d8
+			border-radius 6px
+			width 300px
+			outline none
+			text-align right
+			&.manager
+				border-color #2b6967
+				&::placeholder
+					color #2b6967
+		a
+			display block
+			width 91px
+			height 37px
+			border-radius 8px
+			font-size 15px
+			color #fff
+			line-height 37px
+			text-align center
+			background #2b6967
+		.df
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			input
+				width 50px
+			.label
+				padding 0 10px
+		.row
+			margin 8px 0
+			flex-direction row
+			justify-content space-between
+			&:last-child
+				margin 0
+				padding-bottom 0
+	.sex-select
+		position absolute
+		right 8px
+		top 0
+		bottom 0
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		align-items center
+		font-size 16px
+		color #fff
+		line-height 38px
+		span
+			display block
+			margin-left 8px
+			width 137px
+			border-radius 8px
+			background #d8d8d8
+			text-align center
+			transition 0.3s
+			cursor pointer
+			&:hover
+			&.active
+				background #2b6967
+
+.manager-4
+	display block
+	.form
+		.cloumn-two
+			padding-top 32px
+			.row
+				border-bottom 1px solid #d8d8d8
+				margin 0
+				padding 0
+				margin-bottom 16px
+				&:first-child
+				&:last-child
+					border-bottom none
+					margin 0
+				&.bdb
+					border-bottom none
+			.pb50
+				padding-bottom 50px
+		h3
+			font-size 20px
+			color #4a4a4a
+			font-weight bold
+			line-height 28px
+		.edit
+			width auto
+			height auto
+			font-size 20px
+			color #5486f4
+			background none
+			line-height 28px
+		.label
+			font-size 20px
+			color #808080
+			line-height 50px
+
+.user-1
+	.title-wrap
+		padding-bottom 110px
+		text-align center
+		h2
+			line-height 40px
+			padding 0
+			font-size 28px
+			color #4a4a4a
+			font-weight 500
+	.brand
+		margin 84px auto 63px
+		width 239px
+		display block
+		img
+			width 100%
+
+.user-2,
+.user-3
+.user-4,
+	.title-wrap
+		padding 47px 0 40px
+		text-align center
+		h2
+			line-height 40px
+			padding 0
+			font-size 28px
+			color #4a4a4a
+			font-weight 500
+			.tips
+				color #b55561
+			&.en
+				font-size 25px
+	.progress
+		text-align center
+		.title-wrap
+			padding 62px 0 36px
+		.progress-bar
+			margin 0 auto 16px
+			max-width 606px
+			width 75%
+			height 22px
+			border-radius 12.5px
+			background #ccc
+			overflow hidden
+			.bar
+				height 100%
+				border-radius 12.5px
+				background #2b6967
+				width 0
+				transition 0.3s
+		.value
+			font-size 22px
+			color #4a4a4a
+			line-height 30px
+	.radio-wrap
+		max-width 606px
+		width 75%
+		margin 0 auto
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		.radio
+			flex 0 0 48%
+			height 185px
+			background url('../img/button-unactive.png') center center/100% 100% no-repeat
+			margin-bottom 28px
+			transition 0.3s
+			cursor pointer
+			&.active
+				background-image url('../img/button-active.png')
+				h3
+					color #fff
+			label
+				display block
+				width 100%
+				height 100%
+				position relative
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				align-items center
+				justify-content center
+				flex-direction column
+			input
+				position absolute
+				top 0
+				bottom 0
+				left 0
+				right 0
+				appearance none
+			h3
+				font-size 25px
+				color #4a4a4a
+				line-height 36px
+			.en
+				font-size 20px
+				line-height 28px
+	.textarea
+		position relative
+		max-width 606px
+		width 75%
+		margin 0 auto 16px
+		padding 20px
+		height 229px
+		background #fff
+		box-sizing border-box
+		border-radius 12px
+		&.active
+			&:before
+			&:after
+				opacity 0
+		&:before
+			position absolute
+			top 20px
+			left 20px
+			font-size 19px
+			color #808080
+			line-height 28px
+			content attr(data-cn)
+			white-space pre-wrap
+			transition 0.3s
+		&:after
+			position absolute
+			top 48px
+			left 20px
+			font-size 19px
+			color #808080
+			line-height 28px
+			content attr(data-en)
+			white-space pre-wrap
+			transition 0.3s
+		textarea
+			width 100%
+			height 100%
+			border none
+			outline none
+			font-size 19px
+			color #808080
+			line-height 28px
+	.brand-list
+		max-width 606px
+		width 75%
+		margin 0 auto 28px
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		flex-direction row
+		justify-content space-between
+		.item
+			width 110px
+			height 110px
+			font-size 12px
+			line-height 20px
+			color #898989
+			text-align center
+			background url('../img/button-circle-unactive.png') center center/100% 100% no-repeat
+			cursor pointer
+			transition 0.3s
+			&.item-1
+				.icon
+					background-image url('../img/社群-fb-unactive.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/社群-fb-active.png')
+			&.item-2
+				.icon
+					background-image url('../img/社群-line-unactive.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/社群-line-active.png')
+			&.item-3
+				.icon
+					background-image url('../img/社群-instagram-unactive.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/社群-instagram-active.png')
+			&.item-4
+				.icon
+					background-image url('../img/社群-wechat-unactive.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/社群-wechat-active.png')
+			&.item-5
+				.icon
+					background-image url('../img/社群-weibo-unactive.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/社群-weibo-active.png')
+			&:hover
+			&.active
+				color #fff
+				background-image url('../img/button-circle-active.png')
+			.icon
+				width 52px
+				height 52px
+				margin 18px auto 0
+				transition 0.3s
+				background url() center center/100% auto no-repeat	
+	.form
+		.cloumn-two
+			padding-top 32px
+			.warning
+				display block
+				h3
+					font-size 20px
+					color #4a4a4a
+					line-height 28px
+					text-align left
+					font-weight 500
+			.edit
+				height auto
+				width auto
+				background none
+				font-size 20px
+				color #5486f4
+				line-height 28px
+				span
+					display block
+			.pb50
+				padding-bottom 50px
+			
+				
+// 	.Rectangle-4-Copy-2 {
+//   width: 606px;
+//   height: 22px;
+//   background-color: #cccccc;
+// }
