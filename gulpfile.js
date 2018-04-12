@@ -92,7 +92,7 @@ gulp.task('css', function() {
             rootValue: 100,
             replace: true,
             unitPrecision: 5,
-            propList: ['*', '!border*'],
+            propList: ['*'],
         }),
         // wap
         // pxtorem({

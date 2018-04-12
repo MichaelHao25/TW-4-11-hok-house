@@ -85,6 +85,9 @@ background:rgba(255,255,255,.8);
 			position relative
 			max-width 606px
 			width 75%
+			@media(max-width 500px)
+				width 90%
+				max-width 100%
 		.input-title
 			max-width 606px
 			width 75%
@@ -93,12 +96,15 @@ background:rgba(255,255,255,.8);
 			color #4a4a4a
 			line-height 24px
 			text-align left
+			@media(max-width 500px)
+				width 90%
+				max-width 100%
 			.en
 				padding-left 8px
 		.input
 			width 100%
 			box-sizing border-box
-			padding 12px 18px 14px
+			padding 13px 18px 13px
 			border-radius 12px
 			font-size 20px
 			color #808080
@@ -106,6 +112,11 @@ background:rgba(255,255,255,.8);
 			background #fff
 			border none
 			outline none
+			transition 0.3s
+			&:focus
+			&:hover
+			&.active
+				box-shadow 0 0 0 1Px #2b6967
 		.submit
 			color #fff
 			background #2b6967
@@ -143,9 +154,34 @@ background:rgba(255,255,255,.8);
 				background-image url('../img/下拉.png')
 			&.camera
 				background-image url('../img/相機.png')
+			&.edit
+				background-image url('../img/edit.png')
 	.upload-input
+		position relative
+		&:after
+			content attr(data-name)
+			position absolute
+			top 0
+			bottom 0
+			left 0
+			right 0.54rem
+			background #fff
+			border-radius 12px
+			font-size 20px
+			padding 12px 18px
+			color #808080
+			line-height 28px
+			overflow hidden
+			white-space nowrap
+			text-overflow ellipsis
+		&.active
+			.input
+				border-radius 12px 12px 0 0
+			&+.upload
+				display block
 		.input
-			border-radius 12px 12px 0 0
+			border-radius 12px
+			padding 11px 18px
 	.upload
 		border-radius 0 0 12px 12px
 		max-width 606px
@@ -154,9 +190,13 @@ background:rgba(255,255,255,.8);
 		box-sizing border-box
 		border-top 1px solid #d8d8d8
 		background #fff
+		display none
+		@media(max-width 500px)
+			width 90%
+			max-width 100%
 		img
 			display block
-			max-width 100%
+			width 100%
 	.cloumn-two
 		max-width 606px
 		width 75%
@@ -169,6 +209,9 @@ background:rgba(255,255,255,.8);
 		background #fff
 		margin-bottom 16px
 		border-radius 12px
+		@media(max-width 500px)
+			width 90%
+			max-width 100%
 		input
 			padding 5px 6px 5px 8px
 			line-height 26px
@@ -316,6 +359,9 @@ background:rgba(255,255,255,.8);
 			border-radius 12.5px
 			background #ccc
 			overflow hidden
+			@media(max-width 500px)
+				width 90%
+				max-width 100%
 			.bar
 				height 100%
 				border-radius 12.5px
@@ -337,6 +383,9 @@ background:rgba(255,255,255,.8);
 		display flex
 		justify-content space-between
 		flex-wrap wrap
+		@media(max-width 500px)
+			width 90%
+			max-width 100%
 		.radio
 			flex 0 0 48%
 			height 185px
@@ -368,6 +417,7 @@ background:rgba(255,255,255,.8);
 				left 0
 				right 0
 				appearance none
+				display none
 			h3
 				font-size 25px
 				color #4a4a4a
@@ -385,10 +435,14 @@ background:rgba(255,255,255,.8);
 		background #fff
 		box-sizing border-box
 		border-radius 12px
+		cursor text
+		@media(max-width 500px)
+			width 90%
+			max-width 100%
 		&.active
 			&:before
 			&:after
-				opacity 0
+				display none
 		&:before
 			position absolute
 			top 20px
@@ -428,6 +482,9 @@ background:rgba(255,255,255,.8);
 		display flex
 		flex-direction row
 		justify-content space-between
+		@media(max-width 500px)
+			width 90%
+			max-width 100%
 		.item
 			width 110px
 			height 110px
@@ -505,8 +562,84 @@ background:rgba(255,255,255,.8);
 					display block
 			.pb50
 				padding-bottom 50px
-			
-				
+
+.layout-touch-no-move
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	display none
+.z10
+	z-index 10
+.z11	
+	z-index 11
+.regional-selection
+	position fixed
+	left 0
+	right 0
+	top 0
+	bottom 0
+	background #fff
+	max-width 800px
+	margin 0 auto
+	z-index 11
+	display none
+	.regional-header
+		height 92px
+		border-bottom 2px solid #d8d8d8
+		.close
+			display block
+			padding 24px
+			width 44px
+			height 44px
+			background url('../img/微信图片_20180412144640.png') center center/44px 44px no-repeat
+	.regional-list
+		ul
+			height calc(100vh - 500px)
+			height calc(100vh - 276px)
+			overflow-y scroll
+			border-bottom 1px solid #d8d8d8
+			-webkit-overflow-scrolling touch
+		li
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			justify-content space-between
+			padding 20px 45px 20px 90px
+			font-size 30px
+			color #808080
+			line-height 50px
+			border-bottom 1px solid #d8d8d8
+			&:last-child
+				border-bottom none
+			img
+				display block
+				height 50px
+	.regional-other
+		padding 24px 24px 0 24px
+		.form
+			.input-wrap
+				max-width 100%
+				width 100%
+			.row
+				padding-bottom 24px
+
+.layout-full
+	position relative
+	&:after
+		content ""
+		position absolute
+		left 0
+		right 0
+		bottom 0
+		top 0
+	&.sex
+		&:after
+			right 290px
 // 	.Rectangle-4-Copy-2 {
 //   width: 606px;
 //   height: 22px;

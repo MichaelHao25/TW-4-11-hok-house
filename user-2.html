@@ -41,8 +41,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-wrap">
-						<input type="text" name="" id="" placeholder="性別 Gender" class="input">
+					<div class="input-wrap layout-full sex">
+						<input type="text" name="" id="" placeholder="性別 Gender" class="input" >
 						<div class="sex-select">
 							<span>男 Male</span>
 							<span class="active">女 Female</span>
@@ -55,9 +55,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-wrap">
+					<div class="input-wrap regional-selection-trigger layout-full">
 						<input type="text" name="" id="" placeholder="國籍 Nationality" class="input">
-
 						<div class="top-right-icon drop-down"></div>
 					</div>
 				</div>
@@ -84,6 +83,45 @@
 			</div>
 		</form>
 	</main>
+
+	<div class="layout-touch-no-move z10 touchmove-preventDefault"></div>
+	<div class="layout">
+		<div class="regional-selection z11">
+			<div class="regional-header">
+				<a href="javascript:;" class="close"></a>
+			</div>
+			<div class="regional-list">
+				<ul>
+					<li><span>台灣 Taiwan</span><img src="img/Taiwan.png" alt=""></li>
+					<li><span>日本 Japan</span><img src="img/日本.png" alt=""></li>
+					<li><span>香港 Hong kong</span><img src="img/香港.png" alt=""></li>
+					<li><span>中國 China</span><img src="img/中國.png" alt=""></li>
+					<li><span>澳門 Macao</span><img src="img/澳門.png" alt=""></li>
+					<li><span>韓國 Korea</span><img src="img/韓國.png" alt=""></li>
+					<li><span>新加坡 Singapore</span><img src="img/新加坡.png" alt=""></li>
+					<li><span>馬來西亞 Malaysia</span><img src="img/馬來西亞.png" alt=""></li>
+					<li><span>美國 United States</span><img src="img/美國.png" alt=""></li>
+					<li><span>加拿大 Canada</span><img src="img/加拿大.png" alt=""></li>
+					<li><span>法國 France</span><img src="img/法國.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="regional-other">
+				<div class="form">
+					<div class="row">
+						<div class="input-wrap">
+							<input type="text" name="" id="" placeholder="其他 (您來自哪裡？ Where are you from?)" class="input active">
+							<div class="top-right-icon edit"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-wrap">
+							<input type="submit" value="確認 Submit" class="input submit">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery-3.1.0.min.js"></script>
 	<script src="js/js.js"></script>
 </body>

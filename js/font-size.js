@@ -1,19 +1,17 @@
 ﻿(function() {
-    if ((/Android|iPhone|SymbianOS|Windows Phone|iPad|iPod/).test(navigator.userAgent)) {
-        document.deviceClickEvent = 'tap';
-    } else {
-        document.deviceClickEvent = 'click';
-    }
-    window.a = document.deviceClickEvent;
 
-    var designWidth = document.getElementsByTagName('head')[0].getAttribute('design-width');
+    var designWidth = parseInt(document.getElementsByTagName('head')[0].getAttribute('design-width'));
 
     function auto_size() {
         var deviceWidth = document.documentElement.clientWidth;
         // console.log(deviceWidth + '   ' + designWidth);
-        if (deviceWidth > designWidth)
-            deviceWidth = designWidth;
-        document.documentElement.style.fontSize = deviceWidth / (designWidth / 100) + 'px';
+        if (deviceWidth > (designWidth + 100))
+            deviceWidth = designWidth + 100;
+        if (deviceWidth < 500) {
+            document.documentElement.style.fontSize = deviceWidth / (designWidth / 130) + 'px';
+        } else {
+            document.documentElement.style.fontSize = deviceWidth / (designWidth / 100) + 'px';
+        }
     }
 
     auto_size()
