@@ -575,6 +575,7 @@ background:rgba(255,255,255,.8);
 .z11	
 	z-index 11
 .regional-selection
+.id-selection
 	position fixed
 	left 0
 	right 0
@@ -586,15 +587,28 @@ background:rgba(255,255,255,.8);
 	z-index 11
 	display none
 	.regional-header
+	.id-header
 		height 92px
 		border-bottom 2px solid #d8d8d8
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content space-between
 		.close
 			display block
 			padding 24px
 			width 44px
 			height 44px
 			background url('../img/微信图片_20180412144640.png') center center/44px 44px no-repeat
+		.clear
+			padding 24px
+			font-size 25px
+			line-height 44px
+			color #2b6967
 	.regional-list
+	.id-list
 		ul
 			height calc(100vh - 500px)
 			height calc(100vh - 276px)
@@ -620,6 +634,7 @@ background:rgba(255,255,255,.8);
 				display block
 				height 50px
 	.regional-other
+	.id-other
 		padding 24px 24px 0 24px
 		.form
 			.input-wrap
@@ -627,6 +642,10 @@ background:rgba(255,255,255,.8);
 				width 100%
 			.row
 				padding-bottom 24px
+	.id-list
+		ul	
+			height calc(100vh - 500px)
+			height calc(100vh - 198px)
 
 .layout-full
 	position relative

@@ -1,0 +1,128 @@
+.data-range
+	margin 500px auto
+	width 606Px
+	box-shadow 0 2Px 8Px 0 rgba(0, 0, 0, 0.15)
+	border-radius 12Px
+	.date
+		padding 0 13Px
+		line-height 43Px
+		font-size 12Px
+		color rgba(0, 0, 0, 0.65)
+		border-bottom 1Px solid rgba(0, 0, 0, 0.3);
+	.yaer
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		border-bottom 1Px solid rgba(0, 0, 0, 0.3);
+		position relative
+		// .yaer-month
+		// 	position relative
+		.left-control
+			left 13Px
+			top 0
+			bottom 0
+		.right-control
+			right 13Px
+			top 0
+			bottom 0
+		.left-control
+		.right-control
+			position absolute
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			.year-previous
+			.month-previous
+			.month-next
+			.year-next
+				height 100%
+				width 30Px
+				cursor pointer
+				text-align center
+				line-height 44Px
+				background url('../img/left2.png') center center no-repeat
+			.year-previous
+				background-image url('../img/left 2.png')
+			.month-previous
+				background-image url('../img/left.png')
+			.month-next
+				background-image url('../img/right.png')
+			.year-next
+				background-image url('../img/right 2.png')
+
+		.yaer-month
+			flex 1
+			text-align center
+			line-height 44Px
+			font-size 12Px
+			font-weight bold
+			color rgba(0, 0, 0, 0.85)
+	.container
+		display -webkit-flex
+		display -moz-flex
+		display -ms-flex
+		display -o-flex
+		display flex
+		justify-content center
+		padding 18Px 0 13Px
+		.column
+			flex 1 1 50%
+			.week
+			.day .row
+				display -webkit-flex
+				display -moz-flex
+				display -ms-flex
+				display -o-flex
+				display flex
+				flex-wrap wrap
+				align-items center
+				justify-content center
+				span
+					margin 0 6Px
+					width 26Px
+					height 26Px
+					margin-bottom 5Px
+					font-size 14Px
+					color rgba(0, 0, 0, 0.25)
+					line-height 26Px
+					text-align center
+					font-weight bold
+			.week
+				span
+					color rgba(0, 0, 0, 0.85)
+			.day .row
+				span
+					font-weight normal
+					cursor no-drop
+					&.today
+						
+					&.active
+						background #2b6967
+						color #fff
+						border-radius 2Px
+						cursor pointer
+					&.select
+						color rgba(0, 0, 0, 0.65)
+						cursor pointer
+						&.selected
+							position relative
+							background #e5f2f1
+							&:after
+								content ""
+								position absolute
+								right -12Px
+								width 12Px
+								top 0
+								bottom 0
+								background #e5f2f1
+								z-index -1
+							&:last-child:after
+								display none
+							&:hover
+								box-shadow 0 0 0 1Px #2b6967
+								border-radius 2Px
+				

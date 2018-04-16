@@ -6,7 +6,8 @@
         var deviceWidth = document.documentElement.clientWidth;
         // console.log(deviceWidth + '   ' + designWidth);
         if (deviceWidth > (designWidth + 100))
-            deviceWidth = designWidth + 100;
+            // deviceWidth = designWidth + 100;
+            deviceWidth = designWidth;
         if (deviceWidth < 500) {
             document.documentElement.style.fontSize = deviceWidth / (designWidth / 130) + 'px';
         } else {

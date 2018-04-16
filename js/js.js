@@ -113,6 +113,31 @@ $('.regional-selection .regional-other').on('click', '.submit', function() {
 
 // 国家选择
 
+// id选择
+$('.id-selection-trigger').on('click', function() {
+	$('.layout-touch-no-move').show();
+	$('.id-selection').fadeIn();
+});
+$('.id-selection .id-header .close').on('click', function() {
+	$('.layout-touch-no-move').hide();
+	$('.id-selection').fadeOut();
+});
+$('.id-selection .id-list li').on('click', function() {
+	$('.id-selection .id-header .close').trigger('click')
+	$('.id-selection-trigger input').val($(this).children('span').text());
+});
+$('.id-selection .id-other').on('click', '.submit', function() {
+	// var str = $('.id-selection .id-other .input').val()
+	// if (str == '') {
+	// 	alert('不能为空');
+	// } else {
+	$('.id-selection .id-header .close').trigger('click')
+	// $('.regional-selection-trigger input').val(str);
+	// }
+});
+
+// id选择
+
 
 // up load
 $('.upload-input').on('click', function() {
