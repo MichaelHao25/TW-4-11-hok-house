@@ -10,6 +10,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/data-range.css">
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -19,7 +20,7 @@
 	</header>
 	<main class="main user-1">
 		<a href="#" class="brand">
-			<img src="img/LOGO.png" alt="">
+			<img src="img/2fc4288394d87f80cba5ceaac91eddc3.png" alt="">
 		</a>
 		<div class="title-wrap">
 			<h2>歡迎來到 Ho̍k House鶴宮寓</h2>
@@ -32,16 +33,16 @@
 					<div class="input-title">
 						入住時間<span class="en">Date </span>
 					</div>
-					<div class="input-wrap">
+					<div class="input-wrap data-range-toogle layout-full">
 						<input type="text" name="" id="" placeholder="入住時間 Check in → Check out" class="input">
 						<div class="top-right-icon drop-down"></div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-title">
-						入住時間<span class="en">Date </span>
+						人數<span class="en">Number of people </span>
 					</div>
-					<div class="input-wrap">
+					<div class="input-wrap number-picker-toggle layout-full">
 						<input type="text" name="" id="" placeholder="1人" class="input">
 						<div class="top-right-icon drop-down"></div>
 					</div>
@@ -54,8 +55,37 @@
 			</div>
 		</form>
 	</main>
-	<script src="js/jquery-3.1.0.min.js"></script>
-	<script src="js/js.js"></script>
+	<div class="layout-touch-no-move z10 touchmove-preventDefault"></div>
+	<div class="layout">
+		<div class="number-picker">
+			<div class="wrap">
+				<div class="row">
+					<div class="text">大人 Adult</div>
+					<div class="people-number-control">
+						<a href="javascript:;" class="add"></a>
+						<input type="text" value="1">
+						<a href="javascript:;" class="min"></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="text">小孩(12歲以下) Child(below 12 years)</div>
+					<div class="people-number-control">
+						<a href="javascript:;" class="add"></a>
+						<input type="text" value="1">
+						<a href="javascript:;" class="min"></a>
+					</div>
+				</div>
+			</div>
+			<div class="control-btn">
+				<a href="javascript:;" class="clear">清除</a>
+				<a href="javascript:;" class="enter">確認</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/data-range.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>
 

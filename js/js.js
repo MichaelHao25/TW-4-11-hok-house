@@ -92,10 +92,14 @@ $('.form .sex-select').on('click', 'span', function() {
 $('.regional-selection-trigger').on('click', function() {
 	$('.layout-touch-no-move').show();
 	$('.regional-selection').fadeIn();
+
+	fix_screen('hide')
 });
 $('.regional-selection .regional-header .close').on('click', function() {
 	$('.layout-touch-no-move').hide();
 	$('.regional-selection').fadeOut();
+
+	fix_screen()
 });
 $('.regional-selection .regional-list li').on('click', function() {
 	$('.regional-selection .regional-header .close').trigger('click')
@@ -117,10 +121,16 @@ $('.regional-selection .regional-other').on('click', '.submit', function() {
 $('.id-selection-trigger').on('click', function() {
 	$('.layout-touch-no-move').show();
 	$('.id-selection').fadeIn();
+
+	fix_screen('hide')
+
 });
 $('.id-selection .id-header .close').on('click', function() {
 	$('.layout-touch-no-move').hide();
 	$('.id-selection').fadeOut();
+
+	fix_screen()
+
 });
 $('.id-selection .id-list li').on('click', function() {
 	$('.id-selection .id-header .close').trigger('click')
@@ -159,3 +169,102 @@ $('.upload-input input').on('change', function() {
 	$('.upload img').attr('src', url);
 
 });
+
+
+
+// 日历
+$('.data-range-toogle').on('click', function() {
+	$('.data-range').css({
+		top: $(this).offset().top + $(this).height() + 1,
+		left: $(this).offset().left
+	})
+	$('.data-range').addClass('active show');
+
+	fix_screen('hide')
+
+});
+$('.data-range').on('click', function() {
+	var str = ''
+	$.each($('.data-range .date span'), function(index, val) {
+		index == 0 ? str += $(val).text() : str += ' - ' + $(val).text();
+	});
+	$('.data-range-toogle .input').val(str);
+});
+$('body').on('click', '.data-range .control-btn a', function() {
+	$('.data-range').removeClass('show');
+	setTimeout(function() {
+		$('.data-range').removeClass('active');
+	}, 400);
+
+	fix_screen()
+
+});
+
+
+$('.number-picker-toggle').on('click', function() {
+
+	fix_screen('hide')
+
+	$('.number-picker').css({
+		top: $(this).offset().top + $(this).height() + 1,
+		left: $(this).offset().left
+	})
+	$('.number-picker').fadeIn();
+});
+$('.people-number-control').on('click', '.add', function() {
+	var number = parseInt($(this).siblings('input').val());
+	$(this).siblings('input').val(++number);
+});
+$('.people-number-control').on('click', '.min', function() {
+
+	var number = parseInt($(this).siblings('input').val());
+	number == 0 ? number = 0 : --number;
+	$(this).siblings('input').val(number);
+});
+$('.number-picker .control-btn .clear').on('click', function() {
+	$('.number-picker-toggle .input').val('');
+	$('.number-picker').fadeOut();
+
+	fix_screen()
+
+});
+$('.number-picker .control-btn .enter').on('click', function() {
+	var number = 0
+	$.each($('.number-picker .wrap input'), function(index, val) {
+		number += parseInt($(val).val());
+	});
+	$('.number-picker-toggle input').val(number + '人');
+	$('.number-picker').fadeOut();
+
+	fix_screen()
+
+});
+
+
+$(window).on('resize', function() {
+	$('.number-picker').css({
+		top: $('.number-picker-toggle').offset().top + $('.number-picker-toggle').height() + 1,
+		left: $('.number-picker-toggle').offset().left
+	})
+	$('.data-range').css({
+		top: $('.data-range-toogle').offset().top + $('.data-range-toogle').height() + 1,
+		left: $('.data-range-toogle').offset().left
+	})
+});
+
+// 人数
+
+
+
+function fix_screen(hide) {
+	var top = document.documentElement.scrollTop || document.body.scrollTop;
+	if (hide == 'hide') {
+		document.documentElement.style.overflow = 'hidden';
+		$('body').addClass('active').css('top', '-' + top + 'px');
+	} else {
+		$('body').removeClass('active');
+		document.documentElement.style.overflow = 'auto';
+		document.documentElement.scrollTop = -parseInt($('body').css('top'));
+		document.body.scrollTop = -parseInt($('body').css('top'));
+	}
+}
