@@ -10,6 +10,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/data-range.css">
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -24,12 +25,12 @@
 		<form action="#">
 			<div class="form">
 				<div class="cloumn-two">
-					<div class="row">
+					<div class="row data-range-toogle layout-full">
 						<div class="label">
 							入住時間
 						</div>
 						<div class="content">
-							<input type="text" placeholder="2018-03-12 → 2018-03-15">
+							<input type="text" placeholder="2018-03-12 → 2018-03-15" class="value">
 						</div>
 					</div>
 					<div class="row">
@@ -71,12 +72,13 @@
 						<div class="label">
 							證件或護照
 						</div>
-						<div class="content">
+						<div class="content upload-input-files">
 							<a href="#">重新拍攝</a>
+							<input type="file" name="" id="" accept="image/*" placeholder="證件或護照" class="input">
 						</div>
 					</div>
 					<div class="row">
-						<div class="pic">
+						<div class="pic upload-url">
 							<img src="img/6d1366d9dfecb3f58edcdaaa3bc64da1.png" alt="">
 						</div>
 					</div>
@@ -89,7 +91,8 @@
 			</div>
 		</form>
 	</main>
-	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/jquery-3.1.0.min.js"></script>.
+	<script src="js/data-range.js"></script>
 	<script src="js/js.js"></script>
 </body>
 </html>

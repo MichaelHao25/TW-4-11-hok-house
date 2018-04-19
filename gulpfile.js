@@ -119,6 +119,7 @@ gulp.task('css', function() {
         .pipe(sourcemaps.init())
         // .pipe(postcss(processors))
         .pipe(stylus({
+            // compress: true,
             use: [
                 poststylus(processors)
             ]

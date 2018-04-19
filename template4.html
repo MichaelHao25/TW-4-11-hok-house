@@ -10,6 +10,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/data-range.css">
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -23,17 +24,18 @@
 		<h2>完成Check-in</h2>
 		<form action="#">
 			<div class="form">
-				<div class="cloumn-two">
+				<div class="cloumn-two active template-4">
 					<div class="row pb50">
 						<h3>入住資訊</h3>
-						<a href="#" class="edit">編輯</a>
+						<a href="#" class="edit active">編輯</a>
+						<a href="#" class="done">完成</a>
 					</div>
 					<div class="row">
 						<div class="label">
 							入住時間
 						</div>
-						<div class="content">
-							<div class="label">2018-03-12 → 2018-03-15</div>
+						<div class="content data-range-toogle layout-full">
+							<input type="text" placeholder="2018-03-12 → 2018-03-15" class="value">
 						</div>
 					</div>
 					<div class="row">
@@ -41,7 +43,7 @@
 							姓名
 						</div>
 						<div class="content">
-							<div class="label">John DeVore</div>
+							<input type="text" placeholder="John DeVore">
 						</div>
 					</div>
 					<div class="row">
@@ -49,15 +51,18 @@
 							身分證
 						</div>
 						<div class="content">
-							<div class="label">S124593895</div>
+							<input type="text" placeholder="S124593895">
 						</div>
 					</div>
 					<div class="row">
 						<div class="label">
 							人數
 						</div>
-						<div class="content">
-							<div class="label">大人 2   小孩 1</div>
+						<div class="content df">
+							<div class="label">大人</div>
+							<input type="text" placeholder="2">
+							<div class="label">小孩</div>
+							<input type="text" placeholder="1">
 						</div>
 					</div>
 					<div class="row">
@@ -65,31 +70,36 @@
 							房號
 						</div>
 						<div class="content">
-							<div class="label">001</div>
+							<input type="text" placeholder="管理者請輸入" class="manager">
 						</div>
 					</div>
 					<div class="row bdb">
 						<div class="label">
 							證件或護照
 						</div>
-						<div class="content">
+						<div class="content upload-input-files">
+
+							<a href="javascript:;">重新拍攝</a>
+							<input type="file" name="" id="" accept="image/*" placeholder="證件或護照" class="input">
+						
 						</div>
 					</div>
-					<div class="row">
-						<div class="pic">
+					<div class="row bdb">
+						<div class="pic upload-url">
 							<img src="img/6d1366d9dfecb3f58edcdaaa3bc64da1.png" alt="">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-wrap">
-						<input type="submit" value="下一步" class="input submit">
+						<input type="submit" value="返回首页" class="input submit">
 					</div>
 				</div>
 			</div>
 		</form>
 	</main>
 	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/data-range.js"></script>
 	<script src="js/js.js"></script>
 </body>
 </html>

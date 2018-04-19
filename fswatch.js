@@ -7,7 +7,9 @@ var arryfilename = {}
 
 function changeName(url) {
 	fs.readFile(url, (err, data) => {
-		if (err) throw err;
+		if (err)
+			//非法目录
+			return;
 		var strdata = data.toString()
 		for (attr in arryfilename) {
 			console.log(attr + '.' + arryfilename[attr][1])
