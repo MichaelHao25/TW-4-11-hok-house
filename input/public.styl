@@ -520,48 +520,42 @@ input::placeholder
 			&.item-1
 				.icon
 					background-image url('../img/2e286b70050b58756a18fc57acf522d6.png')
-				@media(max-width 1099.99px)
-					&:hover
-					&.active
-						.icon
-							background-image url('../img/bb408db629dce3b8923501274a739567.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/bb408db629dce3b8923501274a739567.png')
 			&.item-2
 				.icon
 					background-image url('../img/492b9438f46bbba2fbdf7305f19217b3.png')
-				@media(max-width 1099.99px)
-					&:hover
-					&.active
-						.icon
-							background-image url('../img/4faa6370213ebec7e78164261f201d13.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/4faa6370213ebec7e78164261f201d13.png')
 			&.item-3
 				.icon
 					background-image url('../img/c5212ec1d2b25580c33a61910cca4534.png')
-				@media(max-width 1099.99px)
-					&:hover
-					&.active
-						.icon
-							background-image url('../img/d1d20a0bbb7df1c39aea95725a390ba7.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/d1d20a0bbb7df1c39aea95725a390ba7.png')
 			&.item-4
 				.icon
 					background-image url('../img/e6c4649ddc678359940d41f29a269837.png')
-				@media(max-width 1099.99px)
-					&:hover
-					&.active
-						.icon
-							background-image url('../img/cde2c34132db852944b859b823bfb94e.png')
+				&:hover
+				&.active
+					.icon
+						background-image url('../img/cde2c34132db852944b859b823bfb94e.png')
 			&.item-5
 				.icon
 					background-image url('../img/e88247a6ad82687954edb48d19610616.png')
-				@media(max-width 1099.99px)
-					&:hover
-					&.active
-						.icon
-							background-image url('../img/e5c18cec78cd61b64be335e1efa7ba17.png')
-			@media(max-width 1099.99px)
 				&:hover
 				&.active
-					color #fff
-					background-image url('../img/bede99cecdf335c07b6fc9d00428981d.png')
+					.icon
+						background-image url('../img/e5c18cec78cd61b64be335e1efa7ba17.png')
+			&:hover
+			&.active
+				color #fff
+				background-image url('../img/bede99cecdf335c07b6fc9d00428981d.png')
 			.icon
 				width 52px
 				height 52px
@@ -679,7 +673,7 @@ input::placeholder
 			&::-webkit-scrollbar
 				display none
 			@media(min-width 1099.99px)
-				height 500px
+				height 300px
 		li
 			display -webkit-flex
 			display -moz-flex
@@ -696,6 +690,7 @@ input::placeholder
 			@media(min-width 1099.99px)
 				padding 10px 20px
 				font-size 20px
+				line-height 40px
 				&.other
 					display block
 			&:last-child
@@ -703,6 +698,8 @@ input::placeholder
 			img
 				display block
 				height 50px
+				@media(min-width 1099.99px)
+					height 40px
 		.other
 			display none
 	.regional-other
