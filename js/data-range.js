@@ -402,13 +402,17 @@
 			event: 'click',
 			function: function(e) {
 				if (e.target.className.indexOf('select') >= 0) {
+					var arry = [];
 					var value = getAttr(e.target, 'date')
 					if (this.flag) {
 						var startDate = format(getAttr(this, 'start-date'));
 						var endDate = format(value);
 						if (new Date(startDate[0], startDate[1], startDate[2]) <= new Date(endDate[0], endDate[1], endDate[2])) {
 							this.flag = false;
-							querySelectorAll('.data-range .date span')[1].innerHTML = value
+							arry = value.split('-');
+							arry[1] = parseInt(arry[1])+1
+							
+							querySelectorAll('.data-range .date span')[1].innerHTML = arry.join('-')
 							setAttr(this, 'end-date', value);
 							addClass(e.target, 'active');
 
@@ -437,7 +441,9 @@
 
 					this.flag = true;
 					addClass(e.target, 'active');
-					querySelectorAll('.data-range .date span')[0].innerHTML = value
+					arry = value.split('-');
+					arry[1] = parseInt(arry[1])+1		
+					querySelectorAll('.data-range .date span')[0].innerHTML = arry.join('-')
 					querySelectorAll('.data-range .date span')[1].innerHTML = '结束日期'
 					setAttr(this, 'start-date', value);
 
