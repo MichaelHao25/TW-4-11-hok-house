@@ -205,13 +205,30 @@ $('.upload-input-files input').on('change', function() {
 
 
 // 日历
-$('.data-range-toogle').on('click', function() {
-	$('.data-range').css({
-		top: $(this).offset().top + $(this).height() + 1,
-		left: $(this).offset().left
-	})
-	$('.data-range').addClass('active show');
 
+function f_collision_detection() {
+	var i_screen_height = window.innerHeight;
+	var i_data_range_offsetTop = $('.data-range').innerHeight()+$('.data-range-toogle').offset().top;
+	// console.log(i_screen_height,i_data_range_offsetTop);
+	if (i_screen_height>i_data_range_offsetTop) {
+		var i_new_top = $('.data-range-toogle').offset().top+$('.data-range-toogle').innerHeight();
+	}else{
+		var i_new_top = $('.data-range-toogle').offset().top-$('.data-range').innerHeight();
+	}
+	$('.data-range').css({
+		top: i_new_top,
+		left: $('.data-range-toogle').offset().left
+	})
+}
+
+
+$('.data-range-toogle').on('click', function() {
+	// $('.data-range').css({
+	// 	top: $(this).offset().top + $(this).height() + 1,
+	// 	left: $(this).offset().left
+	// })
+	$('.data-range').addClass('active show');
+	f_collision_detection();
 
 });
 $('.data-range').on('click', function() {
@@ -231,8 +248,8 @@ $('body').on('click', '.data-range .control-btn a', function() {
 
 });
 
-
 $('.number-picker-toggle').on('click', function() {
+
 
 	fix_screen('hide')
 
@@ -281,11 +298,11 @@ $(window).on('resize', function() {
 		})
 
 	$('.data-range-toogle').length > 0 &&
-		$('.data-range').css({
-			top: $('.data-range-toogle').offset().top + $('.data-range-toogle').height() + 1,
-			left: $('.data-range-toogle').offset().left
-		})
-
+		// $('.data-range').css({
+		// 	top: $('.data-range-toogle').offset().top + $('.data-range-toogle').height() + 1,
+		// 	left: $('.data-range-toogle').offset().left
+		// })
+		f_collision_detection();
 
 	$('.regional-selection-trigger').length > 0 &&
 		$('.regional-selection').css({
